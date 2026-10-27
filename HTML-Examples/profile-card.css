@@ -1,0 +1,62 @@
+body{
+    margin: 0;    /* Removes the default white space around the page */
+    min-height: 100vh; /* Makes the page at least full screen height so the card can be centered vertically */
+    display: flex;     /* Turns body into a flex container so we can center the card easily */
+    align-items: center;   /* Centers the card vertically (top to bottom) */
+    justify-content: center;  /* Centers the card horizontally (left to right) */
+    background-color: #eef2f7;  /* Sets a light gray-blue page background */
+    font-family:  Arial, sans-serif; /* Sets the default text font */
+}
+
+.card{
+    background-color: white; /* Makes the card white */
+    width: 320px;             /* Sets the card width to 320 pixels */
+    border-radius: 16px;  /* Adds 30px space inside the card, around the photo and text */
+    padding: 30px;  /* Makes the card corners rounded */
+    text-align: center; /* Centers all text inside the card */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);     /* Adds a soft shadow below the card
+                                                        0 = no horizontal shadow
+                                                        8px = shadow moves 8px down
+                                                        20px = shadow blur size
+                                                        rgba(...) = shadow color and transparency */
+}
+
+.profile-photo {
+    width: 120px; /* Sets photo width to 120px */
+    height: 120px;  /* Sets photo height to 120px */
+    border-radius: 50%; /* Makes the square photo a circle */
+    object-fit: cover; /* Keeps the photo looking good and  prevents it from stretching */
+}
+ 
+.name{
+    margin: 15px 0 5px;  /* Adds space:
+                                15px above the name
+                                0px left/right
+                                5px below the name */
+    font-size: 24px;   /* Makes the name large */
+    color: #222;      /* Sets dark gray/black text color */
+}
+.role{
+  margin: 0; /* Removes default space around the role text */
+  color: #666; /* Sets medium gray text color */
+  font-size: 15px; /* Makes the role text smaller than the name */
+}
+.bio {
+  margin: 15px 0 20px;  /* Adds space above and below the bio */
+  color: #444;
+  line-height: 1.5;  /* Increases space between lines, making the paragraph easier to read */
+}
+.button{
+    display: inline-block;  /* Lets the link accept padding like a button */
+    padding: 10px 20px;        /* Adds space inside the button:
+                                10px top/bottom
+                                20px left/right */
+    background-color: #2563eb;  /* Sets the button background to blue */
+    color: white;        /* Makes the button text white */
+    text-decoration: none;   /* Removes the default underline from the link */
+    border-radius: 4px;       /* Makes the button corners rounded */
+    font-size: 15px;         /* Sets the button text size */
+}
+.button:hover{
+    background-color:  #1d4ed8;  /* Changes button color to darker blue when the mouse is over it */
+}

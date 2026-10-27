@@ -1,0 +1,72 @@
+body{
+    margin: 0;      /* Removes default space around the page */
+    min-height: 100vh; /* Makes the page full screen height */
+    display: flex;    /* Enables easy centering */
+    align-items: center;   /* Centers menu vertically */
+    justify-content: center;  /* Centers menu horizontally */
+    background-color: #f4e9dc;  /* Light cream background */
+    font-family:  Arial, sans-serif;;
+}
+.menu{
+    background-color: #fff8f0; /* Light card background */
+    width: 90%;        /* Takes 90% of available width */
+    max-width: 500px;   /* But never becomes wider than 500px */
+    padding: 30px;      /* Space inside the menu card */
+    border: 4px solid #8b5e3c;  /* Brown border around the menu */
+    border-radius: 12px;   /* Rounded corners */
+    text-align: center;    /* Centers default text */
+}
+.cafe-name{
+    margin: 0;     /* Removes default heading spacing */
+    font-size: 36px;
+    color: #5a3825;
+    text-transform: uppercase; /* Makes text CAPITAL LETTERS */
+    letter-spacing: 3px;   /* Adds space between letters */
+}
+.established{
+    margin: 5px 0 0;  /* Small space below the cafe name */
+    color: #8b5e3c;
+    font-size: 14px;
+    font-style: italic;
+}
+
+hr{
+    border: none; /* Removes default line border */
+    height: 2px;
+    background-color: #8b5e3c;
+    margin: 20px 0;   /* Space above and below the line */
+}
+h2{
+    color: #5a3825;
+    font-size: 26px;
+    margin-top: 0;  /* Removes extra space at the top */
+}
+.item{
+    display: flex;  /* Places item name and price side by side */
+    justify-content: space-between; /* Pushes name left and price right */
+    padding: 8px 0;    /* Space above and below each item */
+     border-bottom: 1px dashed #d7b899; /* Light dotted line under items */
+}
+/* ITEM NAME */
+.item-name {
+  margin: 0;                  /* Removes default paragraph spacing */
+  font-size: 18px;
+  color: #333;
+  text-align: left;           /* Keeps item name on the left */
+}
+
+/* PRICE */
+.price {
+  margin: 0;                  /* Removes default paragraph spacing */
+  font-size: 18px;
+  color: #5a3825;
+  font-weight: bold;          /* Makes price bold */
+  text-align: right;          /* Keeps price on the right */
+}
+
+/* FOOTER TEXT */
+footer p {
+  margin: 0;                  /* Removes default footer spacing */
+  color: #5a3825;
+  font-size: 14px;
+}

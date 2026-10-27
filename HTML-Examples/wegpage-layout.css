@@ -1,0 +1,130 @@
+/* RESET DEFAULT BROWSER STYLES */
+* {
+  margin: 0;               /* Removes default spacing */
+  padding: 0;              /* Removes default padding */
+  box-sizing: border-box;  /* Includes padding and border inside width */
+}
+
+/* PAGE FONT AND BACKGROUND */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eef2f7;
+  padding: 20px;
+}
+
+/* MAIN GRID CONTAINER */
+.page {
+  display: grid;           /* Turns .page into a grid container */
+
+  /* Names each grid area:
+     Row 1: header takes both columns
+     Row 2: sidebar left, main content right
+     Row 3: footer takes both columns */
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+
+  /* First column is smaller for sidebar,
+     second column gets remaining space */
+  grid-template-columns: 250px 1fr;
+
+  /* Header has fixed height,
+     middle row grows,
+     footer has fixed height */
+  grid-template-rows: auto 1fr auto;
+
+  gap: 20px;               /* Space between all grid areas */
+  max-width: 1000px;       /* Stops layout becoming too wide */
+  margin: 0 auto;          /* Centers layout horizontally */
+}
+
+/* HEADER AREA */
+.header {
+  grid-area: header;       /* Connects this element to "header" area */
+  background-color: #1f2937;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+/* SIDEBAR AREA */
+.sidebar {
+  grid-area: sidebar;      /* Connects this element to "sidebar" area */
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* SIDEBAR HEADING */
+.sidebar h2 {
+  margin-bottom: 1rem;     /* Space below heading */
+  color: #1f2937;
+  font-size: 1.25rem;
+}
+
+/* SIDEBAR LIST */
+.sidebar ul {
+  list-style: none;        /* Removes bullet points */
+}
+
+/* SIDEBAR LINKS */
+.sidebar a {
+  display: block;          /* Makes each link take a full line */
+  padding: 0.5rem 0;       /* Space above and below each link */
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* SIDEBAR LINK HOVER */
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* MAIN CONTENT AREA */
+.main-content {
+  grid-area: main;         /* Connects this element to "main" area */
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* MAIN CONTENT TEXT */
+.main-content h2 {
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.main-content p {
+  color: #444;
+  line-height: 1.6;        /* Easier-to-read paragraph spacing */
+  margin-bottom: 1rem;
+}
+
+/* FOOTER AREA */
+.footer {
+  grid-area: footer;       /* Connects this element to "footer" area */
+  background-color: #1f2937;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+/* RESPONSIVE LAYOUT FOR SMALL SCREENS */
+@media (max-width: 700px) {
+  .page {
+    /* On phones, every section takes full width
+       and stacks vertically */
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+
+    grid-template-columns: 1fr; /* Only one column */
+  }
+}

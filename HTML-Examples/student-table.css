@@ -1,0 +1,63 @@
+/* PAGE BACKGROUND */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;  /* Light gray page background */
+  padding: 2rem;              /* Space around the table */
+}
+
+/* TABLE CONTAINER */
+.marks-table {
+  width: 90%;                 /* Table takes 90% of available width */
+  max-width: 600px;           /* But never wider than 600px */
+  margin: 0 auto;             /* Centers table horizontally */
+  border-collapse: collapse;  /* Removes double borders between cells */
+  background-color: white;
+  border-radius: 12px;        /* Rounded table corners */
+  overflow: hidden;           /* Makes rounded corners work properly */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); /* Soft shadow */
+}
+
+/* TABLE TITLE */
+caption {
+  caption-side: top;          /* Places caption above the table */
+  padding: 1rem;              /* Space around caption */
+  font-size: 1.5rem;          /* Large caption text */
+  font-weight: bold;          /* Bold caption */
+  color: #111827;             /* Dark text color */
+  background-color: #2563eb;  /* Blue caption background */
+  color: white;               /* White caption text */
+}
+
+/* TABLE HEADER CELLS */
+th {
+  background-color: #1f2937;  /* Dark header background */
+  color: white;               /* White header text */
+  text-align: left;           /* Left-align header text */
+  padding: 0.75rem 1rem;      /* Space inside header cells */
+  font-size: 1rem;
+  text-transform: uppercase;  /* Makes headings CAPITAL */
+  letter-spacing: 1px;        /* Space between letters */
+}
+
+/* TABLE DATA CELLS */
+td {
+  padding: 0.75rem 1rem;      /* Space inside data cells */
+  color: #374151;             /* Dark gray text */
+  border-bottom: 1px solid #e5e7eb; /* Light line under each row */
+}
+
+/* EVERY SECOND TABLE ROW */
+tbody tr:nth-child(even) {
+  background-color: #f9fafb;  /* Light gray zebra stripe */
+}
+
+/* ROW HOVER EFFECT */
+tbody tr:hover {
+  background-color: #e0e7ff;  /* Light blue on hover */
+}
+
+/* MAKE MARKS AND GRADE COLUMNS CENTERED */
+td:nth-child(3),
+td:nth-child(4) {
+  text-align: center;
+}

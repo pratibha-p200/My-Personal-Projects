@@ -1,0 +1,137 @@
+/* CSS VARIABLES */
+:root {
+  --main-color: #2563eb;       /* Main blue color */
+  --main-dark: #1d4ed8;        /* Darker blue for hover */
+  --text-color: #111827;       /* Dark text color */
+  --gray-text: #6b7280;        /* Gray text color */
+  --card-bg: #ffffff;          /* White card background */
+  --page-bg: #f3f4f6;          /* Light page background */
+  --sale-color: #dc2626;       /* Red sale badge color */
+  --spacing: 1rem;             /* Reusable spacing value */
+}
+
+/* RESET DEFAULT BROWSER STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Padding and border included in width */
+}
+
+/* PAGE BACKGROUND */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--page-bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* PRODUCT CARD */
+.product-card {
+  width: 90%;
+  max-width: 340px;          /* Card never becomes too wide */
+  background-color: var(--card-bg);
+  border-radius: 16px;       /* Rounded corners */
+  overflow: hidden;          /* Hides image corners outside card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Makes hover movement and shadow change smooth */
+}
+
+/* CARD HOVER EFFECT */
+.product-card:hover {
+  transform: translateY(-6px); /* Moves card slightly upward */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18); /* Bigger shadow */
+}
+
+/* IMAGE CONTAINER */
+.image-box {
+  position: relative; /* Needed so .sale-badge can position inside it */
+}
+
+/* PRODUCT IMAGE */
+.product-image {
+  width: 100%;       /* Image fills card width */
+  height: 220px;     /* Fixed image height */
+  object-fit: cover; /* Prevents image stretching */
+  display: block;    /* Removes small space below image */
+}
+
+/* SALE BADGE */
+.sale-badge {
+  position: absolute; /* Positioned inside .image-box */
+  top: 12px;          /* 12px from top of image box */
+  right: 12px;        /* 12px from right of image box */
+  background-color: var(--sale-color);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 999px; /* Fully rounded pill shape */
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase; /* SALE instead of Sale */
+  letter-spacing: 1px;       /* Space between letters */
+}
+
+/* PRODUCT DETAILS AREA */
+.product-details {
+  padding: var(--spacing); /* Space inside details area */
+}
+
+/* PRODUCT NAME */
+.product-name {
+  color: var(--text-color);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem; /* Space below product name */
+}
+
+/* CURRENT PRICE */
+.product-price {
+  color: var(--main-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem; /* Space below price */
+}
+
+/* OLD PRICE */
+.old-price {
+  color: var(--gray-text);
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: line-through; /* Draws line through old price */
+  margin-left: 0.5rem;           /* Space between prices */
+}
+
+/* PRODUCT DESCRIPTION */
+.product-description {
+  color: var(--gray-text);
+  font-size: 0.95rem;
+  line-height: 1.6;        /* More space between lines */
+  margin-bottom: var(--spacing);
+}
+
+/* ADD TO CART BUTTON */
+.add-to-cart {
+  width: 100%;             /* Button fills card width */
+  padding: 0.75rem;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;         /* Shows pointer on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* BUTTON HOVER EFFECT */
+.add-to-cart:hover {
+  background-color: var(--main-dark);
+  transform: translateY(-2px); /* Button moves slightly upward */
+}
+
+/* BUTTON ACTIVE EFFECT */
+.add-to-cart:active {
+  transform: translateY(0); /* Button returns down while clicking */
+}

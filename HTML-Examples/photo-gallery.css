@@ -1,0 +1,41 @@
+body{
+    margin: 0; /* Removes default page spacing */
+    padding: 30px;  /* Adds space around the gallery */
+    background-color: #f3f4f6;
+    font-family: Arial, sans-serif;
+}
+.gallery-title{
+    text-align: center;
+    color: red;
+    margin-bottom: 25px; /* Space below the title */
+    font-size: 2rem;
+}
+.gallery{
+    display: grid;  /* Turns this container into a grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));     /* Creates responsive columns:
+                                                                        each column is at least 250px wide,
+                                                                        and extra space is shared equally using 1fr */
+    gap: 20px;   /* Space between rows and columns */
+    max-width: 1000px;   /* Stops gallery becoming too wide */
+    margin: 0 auto;     /* Centers the gallery horizontally */
+} 
+.photo-card{
+    background-color: white;   /* White card behind each photo */
+    border-radius: 12px;        /* Rounded corners */
+    overflow: hidden;           /* Hides image corners outside the card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+.photo-card img{
+    width: 100%;     /* Image fills card width */
+    height: 200px;   /* Fixed image height */
+    object-fit: cover;  /* Prevents image stretching */
+    display: block;  /* Removes tiny space below image */
+}
+.photo-card p{
+    margin: 0;   /* Removes default paragraph spacing */
+    padding: 12px;   /* Space around caption */
+    font-size: 1rem;
+    color: #444;
+    font-weight: bold;
+}
